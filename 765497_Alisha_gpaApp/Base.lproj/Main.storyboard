@@ -83,7 +83,7 @@
         <!--Student's Name-->
         <scene sceneID="4uE-uH-opx">
             <objects>
-                <tableViewController id="R0b-ZS-idM" sceneMemberID="viewController">
+                <tableViewController id="R0b-ZS-idM" customClass="StudentsTableViewController" customModule="_65497_Alisha_gpaApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yhs-DN-5Z5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
