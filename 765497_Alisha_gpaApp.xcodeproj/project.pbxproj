@@ -13,6 +13,8 @@
 		9B22A410237DE7AD00813392 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B22A40E237DE7AD00813392 /* Main.storyboard */; };
 		9B22A412237DE7B000813392 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B22A411237DE7B000813392 /* Assets.xcassets */; };
 		9B22A415237DE7B000813392 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B22A413237DE7B000813392 /* LaunchScreen.storyboard */; };
+		9B22A41D237DEBE800813392 /* StudentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B22A41C237DEBE800813392 /* StudentsTableViewController.swift */; };
+		9B22A41F237DECD400813392 /* Students.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B22A41E237DECD400813392 /* Students.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		9B22A411237DE7B000813392 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B22A414237DE7B000813392 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B22A416237DE7B000813392 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B22A41C237DEBE800813392 /* StudentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StudentsTableViewController.swift; path = ../../StudentsTableViewController.swift; sourceTree = "<group>"; };
+		9B22A41E237DECD400813392 /* Students.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Students.swift; path = ../../Students.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				9B22A408237DE7AC00813392 /* AppDelegate.swift */,
 				9B22A40A237DE7AC00813392 /* SceneDelegate.swift */,
 				9B22A40C237DE7AC00813392 /* ViewController.swift */,
+				9B22A41C237DEBE800813392 /* StudentsTableViewController.swift */,
+				9B22A41E237DECD400813392 /* Students.swift */,
 				9B22A40E237DE7AD00813392 /* Main.storyboard */,
 				9B22A411237DE7B000813392 /* Assets.xcassets */,
 				9B22A413237DE7B000813392 /* LaunchScreen.storyboard */,
@@ -140,7 +146,9 @@
 			files = (
 				9B22A40D237DE7AC00813392 /* ViewController.swift in Sources */,
 				9B22A409237DE7AC00813392 /* AppDelegate.swift in Sources */,
+				9B22A41F237DECD400813392 /* Students.swift in Sources */,
 				9B22A40B237DE7AC00813392 /* SceneDelegate.swift in Sources */,
+				9B22A41D237DEBE800813392 /* StudentsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
