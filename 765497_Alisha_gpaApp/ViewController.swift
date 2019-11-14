@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var FirstNameTF: UITextField!
     @IBOutlet weak var LastNameTF: UITextField!
     @IBOutlet weak var IDTextField: UITextField!
+    var StuDelegate: StudentsTableViewController?
+    
     
     override func viewDidLoad()
     {
@@ -23,19 +25,49 @@ class ViewController: UIViewController {
 
     @IBAction func SaveButton(_ sender: UIButton)
     {
-        var firstName = FirstNameTF.text
-        var lastName = LastNameTF.text
-        var studentID = IDTextField.text
+       
+        let alertController = UIAlertController(title: "Alert", message: "Are you Sure", preferredStyle: .alert)
+        let NoAction = UIAlertAction(title: "No", style: .cancel, handler: nil)
+        let YesAction = UIAlertAction(title: "Yes", style: .default) {(action) in
+            
+            
+            
+            let alert = UIAlertController(title: "New Contact saved", message: "\(self.FirstNameTF.text) is now a Student ", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "Ok", style: .default) { (action) in
+                
+                
+                var firstName = self.FirstNameTF.text
+                var lastName = self.LastNameTF.text
+                var studentID = self.IDTextField.text
+                       
+                       let student = Student(Firstname: firstName!, Lastname: lastName!, StuID: studentID!)
+                       
+                       Student.Students.append(student)
+                       
+                self.FirstNameTF.text = ""
+                self.LastNameTF.text = ""
+                self.IDTextField.text = ""
+                
+                
+            }
+            alert.addAction(okAction)
+            self.present(alert,animated: true, completion: nil)
+//            let OkAction = UIAlertAction(title: "ok", style: .default, handler: nil)
+           
+        }
         
-        let student = Student(Firstname: firstName!, Lastname: lastName!, StuID: studentID!)
-        
-        Student.Students.append(student)
-        
-        let alertController = UIAlertController(title: "Are you Sure", message: "", preferredStyle: <#T##UIAlertController.Style#>)
+            alertController.addAction(NoAction)
+            alertController.addAction(YesAction)
+        self.present(alertController,animated: true, completion: nil)
+       
         
         
         
     }
-    
+    override func viewWillDisappear(_ animated: Bool)
+    {
+        StuDelegate?.tableView.reloadData()
+    }
 }
+
 
