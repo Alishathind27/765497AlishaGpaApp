@@ -15,6 +15,7 @@
 		9B22A415237DE7B000813392 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B22A413237DE7B000813392 /* LaunchScreen.storyboard */; };
 		9B22A41D237DEBE800813392 /* StudentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B22A41C237DEBE800813392 /* StudentsTableViewController.swift */; };
 		9B22A41F237DECD400813392 /* Students.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B22A41E237DECD400813392 /* Students.swift */; };
+		9B22A421237F3FCA00813392 /* GPAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B22A420237F3FCA00813392 /* GPAViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		9B22A416237DE7B000813392 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B22A41C237DEBE800813392 /* StudentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StudentsTableViewController.swift; path = ../../StudentsTableViewController.swift; sourceTree = "<group>"; };
 		9B22A41E237DECD400813392 /* Students.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Students.swift; path = ../../Students.swift; sourceTree = "<group>"; };
+		9B22A420237F3FCA00813392 /* GPAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GPAViewController.swift; path = ../../GPAViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				9B22A40A237DE7AC00813392 /* SceneDelegate.swift */,
 				9B22A40C237DE7AC00813392 /* ViewController.swift */,
 				9B22A41C237DEBE800813392 /* StudentsTableViewController.swift */,
+				9B22A420237F3FCA00813392 /* GPAViewController.swift */,
 				9B22A41E237DECD400813392 /* Students.swift */,
 				9B22A40E237DE7AD00813392 /* Main.storyboard */,
 				9B22A411237DE7B000813392 /* Assets.xcassets */,
@@ -147,6 +150,7 @@
 				9B22A40D237DE7AC00813392 /* ViewController.swift in Sources */,
 				9B22A409237DE7AC00813392 /* AppDelegate.swift in Sources */,
 				9B22A41F237DECD400813392 /* Students.swift in Sources */,
+				9B22A421237F3FCA00813392 /* GPAViewController.swift in Sources */,
 				9B22A40B237DE7AC00813392 /* SceneDelegate.swift in Sources */,
 				9B22A41D237DEBE800813392 /* StudentsTableViewController.swift in Sources */,
 			);

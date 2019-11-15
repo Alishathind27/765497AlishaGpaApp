@@ -32,13 +32,13 @@ class ViewController: UIViewController {
             
             
             
-            let alert = UIAlertController(title: "New Contact saved", message: "\(self.FirstNameTF.text) is now a Student ", preferredStyle: .alert)
+            let alert = UIAlertController(title: "New Contact saved", message: "\(self.FirstNameTF.text!) is now a Student ", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "Ok", style: .default) { (action) in
                 
                 
-                var firstName = self.FirstNameTF.text
-                var lastName = self.LastNameTF.text
-                var studentID = self.IDTextField.text
+                let firstName = self.FirstNameTF.text
+                let lastName = self.LastNameTF.text
+                let studentID = self.IDTextField.text
                        
                        let student = Student(Firstname: firstName!, Lastname: lastName!, StuID: studentID!)
                        
