@@ -41,11 +41,11 @@ class GPAViewController: UIViewController {
        
         for i in TextFieldCollection.indices{
             marks = GPA(mar: Int(TextFieldCollection[i].text!)!)
-            Student.Students[SemesterDelegate!.studentIndex].marks[SemesterDelegate!.semIndex][i] = Int(TextFieldCollection[i].text!)!
+            Student.Students[SemesterDelegate!.semIndex].marks[SemesterDelegate!.semIndex][i] = Int(TextFieldCollection[i].text!)!
         }
         
         let sgpa = gpa / 2.0
-        Student.Students[SemesterDelegate!.studentIndex].GPA[SemesterDelegate!.semIndex] = sgpa
+        Student.Students[SemesterDelegate!.semIndex].GPA[SemesterDelegate!.semIndex] = sgpa
         
         GPALabel.text = String(format: "GPA: %2F/4", sgpa)
         
