@@ -13,9 +13,12 @@ class SemTableViewController: UITableViewController {
     
     
     var semIndex = -1
+    var studentIndex = -1
+    var stusemesterindex: StudentsTableViewController?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        studentIndex = (stusemesterindex?.studentIndex)!
+     
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -49,6 +52,9 @@ class SemTableViewController: UITableViewController {
       return UITableViewCell()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        stusemesterindex?.tableView.reloadData()
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -94,7 +100,7 @@ class SemTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         if let detailView = segue.destination as? GPAViewController{
             detailView.SemesterDelegate = self
-        
+        }
         if let cell = sender as? UITableViewCell{
             
             semIndex = tableView.indexPath(for: cell)!.row
@@ -106,4 +112,4 @@ class SemTableViewController: UITableViewController {
     
 
     }
-}
+

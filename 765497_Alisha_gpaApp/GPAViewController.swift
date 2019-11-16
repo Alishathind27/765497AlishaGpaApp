@@ -21,6 +21,8 @@ class GPAViewController: UIViewController {
     var GradePoint: Double?
     var audio: AVAudioPlayer!
     let music = ["Win"]
+    var marks: Double?
+    var gpa = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +31,7 @@ class GPAViewController: UIViewController {
     
         for i in CoursesCollection.indices
         {
-            CoursesCollection[i].text = Semester.sem[(SemesterDelegate?.semIndex)!][i]
+         CoursesCollection[i].text = Semester.courses[(SemesterDelegate?.semIndex)!][i]
         }
     }
     
@@ -37,10 +39,17 @@ class GPAViewController: UIViewController {
     @IBAction func Calculate(_ sender: UIButton)
     {
        
-        marks = 
+        for i in TextFieldCollection.indices{
+            marks = GPA(mar: Int(TextFieldCollection[i].text!)!)
+            Student.Students[SemesterDelegate!.studentIndex].marks[SemesterDelegate!.semIndex][i] = Int(TextFieldCollection[i].text!)!
+        }
         
+        let sgpa = gpa / 2.0
+        Student.Students[SemesterDelegate!.studentIndex].GPA[SemesterDelegate!.semIndex] = sgpa
         
-        if g > 2.8{
+        GPALabel.text = String(format: "GPA: %2F/4", sgpa)
+        
+        if gpa > 2.8{
                    let selectedButton = music[sender.tag]
                    let soundURL = Bundle.main.url(forResource: selectedButton, withExtension: "wav")
                    audio = try! AVAudioPlayer(contentsOf: soundURL!)

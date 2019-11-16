@@ -14,7 +14,7 @@ class StudentsTableViewController: UITableViewController,UISearchResultsUpdating
 //    Array for filtered Data
     var filItem = [Student]()
     var searchCont = UISearchController(searchResultsController: nil)
-    
+    var studentIndex = -1
     @IBOutlet weak var searchBar: UISearchBar!
     override func viewDidLoad()
     {
@@ -128,10 +128,25 @@ class StudentsTableViewController: UITableViewController,UISearchResultsUpdating
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        let detailView = segue.destination as? ViewController
-        detailView?.StuDelegate = self
-        
+        if  let detailView = segue.destination as? ViewController{
+        detailView.StuDelegate = self
+            
+            if let Semes = segue.destination as? SemTableViewController{
+                Semes.stusemesterindex = self
+                
+            }
+            if let cell = sender as? UITableViewCell{
+                
+                studentIndex = tableView.indexPath(for: cell)!.row
+            }
+    
+        }
+    
+    
     }
     
+   
+    
+
 
 }
