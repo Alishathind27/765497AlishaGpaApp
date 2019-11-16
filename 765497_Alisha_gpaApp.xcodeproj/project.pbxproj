@@ -17,6 +17,8 @@
 		9B88DC3B237F5E3E00B34B3E /* Students.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88DC3A237F5E3E00B34B3E /* Students.swift */; };
 		9B88DC3D237F5E4A00B34B3E /* StudentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88DC3C237F5E4A00B34B3E /* StudentsTableViewController.swift */; };
 		9B88DC40237F625F00B34B3E /* Win.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9B88DC3F237F625F00B34B3E /* Win.wav */; };
+		9B88DC42237F6CCA00B34B3E /* SemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88DC41237F6CCA00B34B3E /* SemTableViewController.swift */; };
+		9B88DC44237F70B400B34B3E /* Semestar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B88DC43237F70B400B34B3E /* Semestar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		9B88DC3A237F5E3E00B34B3E /* Students.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Students.swift; sourceTree = "<group>"; };
 		9B88DC3C237F5E4A00B34B3E /* StudentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentsTableViewController.swift; sourceTree = "<group>"; };
 		9B88DC3F237F625F00B34B3E /* Win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Win.wav; sourceTree = "<group>"; };
+		9B88DC41237F6CCA00B34B3E /* SemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemTableViewController.swift; sourceTree = "<group>"; };
+		9B88DC43237F70B400B34B3E /* Semestar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Semestar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +71,10 @@
 				9B88DC3E237F623900B34B3E /* Music */,
 				9B88DC3C237F5E4A00B34B3E /* StudentsTableViewController.swift */,
 				9B88DC3A237F5E3E00B34B3E /* Students.swift */,
+				9B88DC41237F6CCA00B34B3E /* SemTableViewController.swift */,
 				9B88DC34237F5D1900B34B3E /* GPAViewController.swift */,
 				9B22A408237DE7AC00813392 /* AppDelegate.swift */,
+				9B88DC43237F70B400B34B3E /* Semestar.swift */,
 				9B22A40A237DE7AC00813392 /* SceneDelegate.swift */,
 				9B22A40C237DE7AC00813392 /* ViewController.swift */,
 				9B22A40E237DE7AD00813392 /* Main.storyboard */,
@@ -162,7 +168,9 @@
 				9B22A40D237DE7AC00813392 /* ViewController.swift in Sources */,
 				9B22A409237DE7AC00813392 /* AppDelegate.swift in Sources */,
 				9B88DC3B237F5E3E00B34B3E /* Students.swift in Sources */,
+				9B88DC42237F6CCA00B34B3E /* SemTableViewController.swift in Sources */,
 				9B88DC3D237F5E4A00B34B3E /* StudentsTableViewController.swift in Sources */,
+				9B88DC44237F70B400B34B3E /* Semestar.swift in Sources */,
 				9B88DC35237F5D1900B34B3E /* GPAViewController.swift in Sources */,
 				9B22A40B237DE7AC00813392 /* SceneDelegate.swift in Sources */,
 			);

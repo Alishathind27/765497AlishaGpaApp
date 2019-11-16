@@ -78,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="924" y="630"/>
+            <point key="canvasLocation" x="927" y="-218"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="GRW-NY-adI">
@@ -101,13 +101,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MAD 2303" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7a-Nr-lqZ">
-                                <rect key="frame" x="26" y="219" width="118" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="auS-GT-tF9" userLabel="Round Style Text Field 2">
                                 <rect key="frame" x="199" y="220" width="160" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -169,6 +162,13 @@
                                     <action selector="Calculate:" destination="ab6-3P-Kax" eventType="touchUpInside" id="DTb-hB-qGf"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MAD 2303" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7a-Nr-lqZ">
+                                <rect key="frame" x="26" y="220" width="118" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="zJY-KF-rqe"/>
@@ -176,16 +176,21 @@
                     <navigationItem key="navigationItem" id="HDN-5M-rtQ"/>
                     <connections>
                         <outlet property="GPALabel" destination="EYm-Vn-Ny4" id="tNy-ZW-Q9c"/>
-                        <outlet property="txtFieldC1" destination="nrc-E3-ub8" id="ZY2-bf-yws"/>
-                        <outlet property="txtFieldC2" destination="auS-GT-tF9" id="hSI-7f-vwT"/>
-                        <outlet property="txtFieldC3" destination="1Cx-pQ-Rhm" id="Se1-lC-fFn"/>
-                        <outlet property="txtFieldC4" destination="462-wC-3YE" id="YOu-Ve-2Bu"/>
-                        <outlet property="txtFieldC5" destination="cce-hO-noB" id="kTh-3f-Eri"/>
+                        <outletCollection property="CoursesCollection" destination="OFq-u8-XfL" collectionClass="NSMutableArray" id="tKr-ck-fSd"/>
+                        <outletCollection property="CoursesCollection" destination="k7a-Nr-lqZ" collectionClass="NSMutableArray" id="aL0-Kz-7oG"/>
+                        <outletCollection property="CoursesCollection" destination="EKF-S4-GSe" collectionClass="NSMutableArray" id="VS5-Ph-kFx"/>
+                        <outletCollection property="CoursesCollection" destination="960-ed-pi1" collectionClass="NSMutableArray" id="0sl-db-UI9"/>
+                        <outletCollection property="CoursesCollection" destination="yyu-Ej-3Kq" collectionClass="NSMutableArray" id="got-q9-0yL"/>
+                        <outletCollection property="TextFieldCollection" destination="nrc-E3-ub8" collectionClass="NSMutableArray" id="hnQ-qr-gQG"/>
+                        <outletCollection property="TextFieldCollection" destination="auS-GT-tF9" collectionClass="NSMutableArray" id="Fhu-tx-fy6"/>
+                        <outletCollection property="TextFieldCollection" destination="1Cx-pQ-Rhm" collectionClass="NSMutableArray" id="djv-lq-LkY"/>
+                        <outletCollection property="TextFieldCollection" destination="462-wC-3YE" collectionClass="NSMutableArray" id="ulq-Cv-us2"/>
+                        <outletCollection property="TextFieldCollection" destination="cce-hO-noB" collectionClass="NSMutableArray" id="2U3-G7-jOQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nqo-wH-HHM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="949.60000000000002" y="-103.89805097451276"/>
+            <point key="canvasLocation" x="1927" y="219"/>
         </scene>
         <!--Student's Name-->
         <scene sceneID="4uE-uH-opx">
@@ -201,15 +206,31 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="studentCell" id="TbX-yh-HOv">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="studentCell" textLabel="Hiz-S4-pkf" detailTextLabel="Dxf-3a-kDg" style="IBUITableViewCellStyleValue1" id="TbX-yh-HOv">
                                 <rect key="frame" x="0.0" y="72" width="375" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TbX-yh-HOv" id="cSC-ZB-jjy">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hiz-S4-pkf">
+                                            <rect key="frame" x="16" y="12" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Dxf-3a-kDg">
+                                            <rect key="frame" x="315" y="12" width="44" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="ab6-3P-Kax" kind="show" id="dtv-J0-CFd"/>
+                                    <segue destination="Rnp-F7-m2b" kind="show" id="fTn-RP-GyU"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -233,6 +254,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fKR-gq-OEk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="175" y="187"/>
+        </scene>
+        <!--Sem Table View Controller-->
+        <scene sceneID="2eB-Xb-gt6">
+            <objects>
+                <tableViewController id="Rnp-F7-m2b" customClass="SemTableViewController" customModule="_65497_Alisha_gpaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="d2N-jN-xST">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="semester" id="jEp-Bi-IWd">
+                                <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jEp-Bi-IWd" id="rPw-ek-0Y1">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ab6-3P-Kax" kind="show" id="ZVH-hu-LQh"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Rnp-F7-m2b" id="18A-YC-M2b"/>
+                            <outlet property="delegate" destination="Rnp-F7-m2b" id="CkX-CI-hp1"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="rps-cw-oeh"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kGT-c8-IEl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1026" y="611"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tka-t8-qyu">

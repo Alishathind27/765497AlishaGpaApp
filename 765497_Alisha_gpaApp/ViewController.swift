@@ -26,9 +26,9 @@ class ViewController: UIViewController {
     @IBAction func SaveButton(_ sender: UIButton)
     {
        
-        let alertController = UIAlertController(title: "Alert", message: "Are you Sure", preferredStyle: .alert)
-        let NoAction = UIAlertAction(title: "No", style: .cancel, handler: nil)
-        let YesAction = UIAlertAction(title: "Yes", style: .default) {(action) in
+        let alertController = UIAlertController(title: "Alert", message: "Are you Sure", preferredStyle: .actionSheet)
+        let NoAction = UIAlertAction(title: "No Way!", style: .cancel, handler: nil)
+        let YesAction = UIAlertAction(title: "Yes,I'm Sure!", style: .default) {(action) in
             
             
             

@@ -12,12 +12,11 @@ import AVFoundation
 class GPAViewController: UIViewController {
 
     
+    @IBOutlet var CoursesCollection: [UILabel]!
+    @IBOutlet var TextFieldCollection: [UITextField]!
+    var SemesterDelegate: SemTableViewController?
     
-    @IBOutlet weak var txtFieldC1: UITextField!
-    @IBOutlet weak var txtFieldC2: UITextField!
-    @IBOutlet weak var txtFieldC3: UITextField!
-    @IBOutlet weak var txtFieldC4: UITextField!
-    @IBOutlet weak var txtFieldC5: UITextField!
+  
    @IBOutlet weak var GPALabel: UILabel!
     var GradePoint: Double?
     var audio: AVAudioPlayer!
@@ -27,22 +26,19 @@ class GPAViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+    
+        for i in CoursesCollection.indices
+        {
+            CoursesCollection[i].text = Semester.sem[(SemesterDelegate?.semIndex)!][i]
+        }
     }
     
 
     @IBAction func Calculate(_ sender: UIButton)
     {
-        let course1 = GPA(mar: Int(txtFieldC1.text!)!)
-        let course2 = GPA(mar: Int(txtFieldC2.text!)!)
-        let course3 = GPA(mar: Int(txtFieldC3.text!)!)
-        let course4 = GPA(mar: Int(txtFieldC4.text!)!)
-        let course5 = GPA(mar: Int(txtFieldC5.text!)!)
-
+       
+        marks = 
         
-        let g = (course1 * 4) + (course2 * 3) + (course3 * 3) + (course4 * 5) + (course5 * 5)/20.0
-        
-        GPALabel.text = "GPA: \(g)/4"
         
         if g > 2.8{
                    let selectedButton = music[sender.tag]
