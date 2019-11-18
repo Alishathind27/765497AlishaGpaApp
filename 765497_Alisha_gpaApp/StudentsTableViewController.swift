@@ -64,6 +64,7 @@ class StudentsTableViewController: UITableViewController,UISearchResultsUpdating
         }
         // Configure the cell...
         cell.textLabel?.text = "\(st.Firstname + " " + "\(st.Lastname)")"
+        cell.detailTextLabel?.text = String(format: "%2f", st.cgpa)
 
         return cell
     }
@@ -130,6 +131,7 @@ class StudentsTableViewController: UITableViewController,UISearchResultsUpdating
         // Pass the selected object to the new view controller.
         if  let detailView = segue.destination as? ViewController{
         detailView.StuDelegate = self
+        }
             
             if let Semes = segue.destination as? SemTableViewController{
                 Semes.stusemesterindex = self
@@ -140,7 +142,7 @@ class StudentsTableViewController: UITableViewController,UISearchResultsUpdating
                 studentIndex = tableView.indexPath(for: cell)!.row
             }
     
-        }
+        
     
     
     }

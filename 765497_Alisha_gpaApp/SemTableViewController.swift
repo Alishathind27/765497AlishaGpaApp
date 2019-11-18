@@ -13,11 +13,13 @@ class SemTableViewController: UITableViewController {
     
     
     var semIndex = -1
+    var semstuindx = -1
     
     var stusemesterindex: StudentsTableViewController?
     override func viewDidLoad() {
         super.viewDidLoad()
-        semIndex = (stusemesterindex?.studentIndex)!
+        semstuindx = stusemesterindex!.studentIndex
+//        semstuindx = (stusemesterindex?.studentIndex)!
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
